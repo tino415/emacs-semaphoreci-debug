@@ -1,3 +1,4 @@
+;;; semaphoreci-debug.el --- Debug SemaphoreCI via TRAMP  -*- lexical-binding: t; -*-
 (require 'tramp)
 
 (defun semaphoreci-exec (job)
