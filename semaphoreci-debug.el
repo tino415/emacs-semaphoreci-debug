@@ -7,11 +7,11 @@
          (process-name (format "sem-debug-job-%s" job))
          (buffer-name (format "*%s*" process-name))
          (buffer (get-buffer-create buffer-name))
-         (folder (format "/sem:%s:~" semaphoreci-job)))
+         (folder (format "/sem:%s:~" job)))
     (make-process
      :name process-name
      :buffer buffer
-     :command (list "sem" "debug" "job" job-id)
+     :command (list "sem" "debug" "job" job)
      :filter (lambda (proc output)
                (with-current-buffer (process-buffer proc)
                  (insert output)
